@@ -1,0 +1,11 @@
+#!/bin/bash
+
+backup=/home/backup
+
+sudo rm -rf $backup
+sudo mkdir -p $backup
+sudo chmod 777 $backup
+sudo dpkg --get-selections > $backup/Package.list
+sudo cp -R /etc/apt/sources.list* $backup/
+sudo apt-key exportall > $backup/Repo.keys
+#rsync --progress /home/`whoami` $backup/`whoami`

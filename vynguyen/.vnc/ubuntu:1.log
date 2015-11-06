@@ -1,0 +1,53 @@
+
+Xvnc Free Edition 4.1.1 - built Nov 18 2014 16:07:18
+Copyright (C) 2002-2005 RealVNC Ltd.
+See http://www.realvnc.com for information on VNC.
+Underlying X server release 40300000, The XFree86 Project, Inc
+
+
+Wed Feb 11 21:01:23 2015
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on port 5901
+ vncext:      created VNC server for screen 0
+error opening security policy file /etc/X11/xserver/SecurityPolicy
+Could not init font path element /usr/X11R6/lib/X11/fonts/Type1/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/Speedo/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/misc/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/75dpi/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/100dpi/, removing from list!
+Could not init font path element /usr/share/fonts/X11/75dpi/, removing from list!
+Could not init font path element /usr/share/fonts/X11/100dpi/, removing from list!
+Option "--login" is no longer supported in this version of gnome-terminal; you might want to create a profile with the desired setting, and use the new '--profile' option
+
+(gnome-terminal:2227): GLib-GIO-CRITICAL **: g_settings_get: the format string may not contain '&' (key 'monospace-font-name' from schema 'org.gnome.desktop.interface'). This call will probably stop working with a future version of glib.
+
+Wed Feb 11 21:01:32 2015
+ Connections: accepted: 0.0.0.0::62841
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Wed Feb 11 21:01:40 2015
+ VNCSConnST:  Server default pixel format depth 16 (16bpp) little-endian rgb565
+ VNCSConnST:  Client pixel format depth 8 (8bpp) colour-map
+ VNCSConnST:  Client pixel format depth 16 (16bpp) little-endian rgb565
+
+Wed Feb 11 21:56:41 2015
+ XserverDesktop: Added unknown keysym 0xffeb to keycode 255
+
+Wed Feb 11 23:01:56 2015
+ XserverDesktop: Added unknown keysym 0xfe03 to keycode 254
+ XserverDesktop: Added unknown keysym 0x1002248 to keycode 253
+
+Wed Feb 11 23:18:46 2015
+ XserverDesktop: Added unknown keysym 0xe7 to keycode 252
+
+Thu Feb 12 00:07:23 2015
+ Connections: closed: 0.0.0.0::62841 (Clean disconnection)
+ SMsgWriter:  framebuffer updates 49482
+ SMsgWriter:    raw rects 1, bytes 17292
+ SMsgWriter:    copyRect rects 2244, bytes 35904
+ SMsgWriter:    hextile rects 208239, bytes 228230108
+ SMsgWriter:    ZRLE rects 2, bytes 3825
+ SMsgWriter:    raw bytes equivalent 1305077670, compression ratio 5.717725
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":1"
+      after 1120227 requests (1120227 known processed) with 0 events remaining.

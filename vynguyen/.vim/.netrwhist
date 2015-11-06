@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/vynguyen/ws/clib/common'
+let g:netrw_dirhist_2='/home/vynguyen/ws/clib/unit-test/utest-lib'
+let g:netrw_dirhist_3='/home/vynguyen/Work/oraInventory'
+let g:netrw_dirhist_4='/home/vynguyen/ws/clib/unit-test/json'

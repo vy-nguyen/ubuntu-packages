@@ -1,0 +1,12 @@
+#!/bin/bash
+
+backup=/home/backup
+
+##  Reinstall now
+rsync --progress $backup/`whoami` /home/`whoami`
+sudo apt-key add $backup/Repo.keys
+sudo cp -R ~/sources.list* /etc/apt/
+sudo apt-get update
+sudo apt-get install dselect
+sudo dpkg --set-selections < $backup/Package.list
+sudo dselect

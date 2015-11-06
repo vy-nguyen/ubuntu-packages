@@ -1,0 +1,28 @@
+[begin] (fluxbox)
+[exec] (Gnome Terminal) {gnome-terminal}
+[separator]
+[include] (/etc/X11/fluxbox/fluxbox-menu)
+[submenu] (Tools)
+    [exec] (Galculator) {galculator}
+    [exec] (Gnome Commander) {gnome-commander}
+    [exec] (File Roller) {file-roller}
+[end]
+[submenu] (Internet)
+    [exec] (Firefox) {firefox}
+    [exec] (Xpdf) {xpdf}
+[end]
+[submenu] (fluxbox menu)
+    [config] (Configure)
+[submenu] (Styles) {Choose a style...}
+    [stylesdir] (/usr/X11R6/share/fluxbox/styles)
+[end]
+    [workspaces] (Workspace List)
+    [commanddialog] (Fluxbox Command)
+    [reconfig] (Reload config)
+    [restart] (Restart Fluxbox)
+    [exit] (Exit Fluxbox)
+    [separator]
+    [exec] (Reboot) {shutdown -r now}
+    [exec] (Shutdown) {shutdown -p now}
+[end]
+[end]

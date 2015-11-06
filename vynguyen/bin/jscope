@@ -1,0 +1,5 @@
+#!/bin/sh
+
+find -L . -type f \( -name "*.js" -o -name "*.css" -o -name "*.jade" \) -print | grep -v components | grep -v karma | grep -v mongo | grep -v grunt | grep -v bower | grep -v dist | grep -v *.min.* | grep -v "/test/" > cscope.files
+ctags -L cscope.files
+cscope 

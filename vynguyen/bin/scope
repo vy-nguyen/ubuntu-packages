@@ -1,0 +1,8 @@
+#!/bin/sh
+
+find -L . -name "*.[ch]" -xtype f -print > cscope.files
+find -L . -name "*.cpp" -xtype f -print >> cscope.files
+find -L . -name "*.json" -xtype f -print >> cscope.files
+cat cscope.files | xargs ctags --fields=+l
+
+cscope 
