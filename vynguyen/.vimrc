@@ -75,6 +75,12 @@ let g:EclimCompletionMethod = 'omnifunc'
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Java shortcuts
+nmap <leader>i :JavaImport<cr>
+nmap <leader>gs :JavaGetSet<cr>
+nmap <leader>jd :JavaDocComment<cr>
+nmap <leader>jg :JavaGet<cr>
+nmap <leader>pr :ProjectRefresh<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -130,15 +136,11 @@ set novisualbell
 set t_vb=
 set tm=500
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
-
-colorscheme desert
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -155,23 +157,27 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 if (has("syntax"))
-    hi Comment       ctermfg=cyan guifg=cyan
-    hi Constant      ctermfg=Brown guifg=Brown
-    hi Special       ctermfg=Grey guifg=Orange
-    hi Identifier    cterm=bold ctermfg=White guifg=#40ffff
-    hi Statement     ctermfg=White guifg=#ffff60 gui=bold
-    hi PreProc       ctermfg=Yellow guifg=#ff80ff
-    hi Type          ctermfg=Green guifg=#60ff60 gui=bold
-    hi Ignore        ctermfg=White guifg=bg
-    hi Error  term=reverse ctermbg=Red ctermfg=Yellow guibg=Red guifg=White
-    hi Todo   term=standout ctermbg=Yellow ctermfg=Black guifg=DarkCyan guibg=Yellow
-    hi cRepeat       ctermfg=DarkRed guifg=#ffa0a0
+    hi Comment       ctermfg=cyan    guifg=cyan
+    hi Constant      ctermfg=Brown   guifg=Brown
+    hi Special       ctermfg=Grey    guifg=Orange
+    hi Statement     ctermfg=White   guifg=#ffff60 gui=bold
+    hi PreProc       ctermfg=Yellow  guifg=#ff80ff
+    hi Type          ctermfg=Green   guifg=#60ff60 gui=bold
+    hi Ignore        ctermfg=White   guifg=bg
+    hi cRepeat       ctermfg=Yellow   guifg=Yellow
+    hi Error  term=reverse  ctermbg=Red    ctermfg=Yellow guibg=Red      guifg=White
+    hi Todo   term=standout ctermbg=Yellow ctermfg=Black  guifg=DarkCyan guibg=Yellow
     hi cStatement    ctermfg=DarkCyan
-    hi cConditional  ctermfg=Red
-    hi cString       ctermfg=Grey guifg=#ffa0a0
-    hi cIncluded     ctermfg=DarkCyan guifg=#ffa0a0
+    hi cConditional  ctermfg=DarkYellow
     hi cSpaceError   ctermbg=Green
+    hi Identifier    cterm=bold       guifg=#40ffff ctermfg=White
+    hi cString       ctermfg=Grey     guifg=DarkCyan
+    hi cIncluded     ctermfg=DarkCyan guifg=#ffa0a0
+    hi Pmenu         ctermbg=White    ctermfg=Blue
+    hi PmenuSel      ctermbg=Blue     ctermfg=White
 endif
+colorscheme desert
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
