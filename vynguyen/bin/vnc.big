@@ -1,3 +1,0 @@
-#!/bin/sh
-
-vncserver :1 -depth 16 -geometry 3600x1050 -alwaysshared

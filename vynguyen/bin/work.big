@@ -1,6 +1,0 @@
-#!/bin/sh
-
-gnome-terminal --hide-menubar --geometry 80x63+0+0 &
-gnome-terminal --hide-menubar --geometry 80x63+751+0 &
-gnome-terminal --hide-menubar --geometry 80x63+1600+0 &
-gnome-terminal --hide-menubar --geometry 80x63+2347+0 &

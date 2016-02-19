@@ -1,4 +1,0 @@
-#!/bin/sh
-
-scp -P 2222 -r ws/btree admin@192.168.1.78:/mnt/sdcard/
-
