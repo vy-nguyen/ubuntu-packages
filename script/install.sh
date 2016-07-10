@@ -1,7 +1,7 @@
 #!/bin/bash
 
 work_dir=`pwd`
-cp -rf etc /etc
+sudo cp -rf etc /etc
 if [ "$?" -ne "0" ]; then
     echo "You need to have root permission"
     exit 1
@@ -25,18 +25,18 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 source ~/.profile
 nvm install 5.12.0
 n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
-npm install -g bower
-npm install -g webpack
+sudo npm install -g bower
+sudo npm install -g webpack
 
 # Install gradle
 #
 echo "Installing Gradle..."
 wget https://downloads.gradle.org/distributions/gradle-2.14-bin.zip
 unzip gradle-2.14-bin.zip
-mv gradle-2.14 /usr/lib
+sudo mv gradle-2.14 /usr/lib
 export GRADLE_HOME=/usr/lib/gradle-2.14
-rm /usr/bin/gradle
-ln -s /usr/lib/gradle-2.14/bin/gradle /usr/bin/gradle
+sudo rm /usr/bin/gradle
+sudo ln -s /usr/lib/gradle-2.14/bin/gradle /usr/bin/gradle
 
 # Install mysql
 #
