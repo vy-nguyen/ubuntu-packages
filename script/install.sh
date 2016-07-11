@@ -57,8 +57,12 @@ mkdir -p ws
 cd ws
 
 git clone https://github.com/vy-nguyen/tvntd.git tvntd
+cd tvntd
+git submodule init
+git submodule update --recursive
+scripts/dev-start.sh
 
-cd tvntd/java/socnet
+cd java/socnet
 npm install
 bower install
 
