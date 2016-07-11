@@ -7,7 +7,7 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
-sudo apt-get install -y openssh-client openssh-server git tree make
+sudo apt-get install -y openssh-client openssh-server git tree make unzip tmux
 
 # Install Java
 #
@@ -23,10 +23,11 @@ echo "Installing node..."
 sudo apt-get remove --purge node
 curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 source ~/.profile
+
+sudo apt-get -y install build-essential libssl-dev
 nvm install 5.12.0
 n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
-sudo npm install -g bower
-sudo npm install -g webpack
+sudo `which npm` install -g bower webpack
 
 # Install gradle
 #
@@ -60,19 +61,4 @@ git clone https://github.com/vy-nguyen/tvntd.git tvntd
 cd tvntd/java/socnet
 npm install
 bower install
-
-# Download gradle
-# unzip, install to /usr/lib
-#
-# export GRADLE_HOME=/usr/lib/gradle-xxx
-# setup softlink to /usr/bin/gradle
-
-# Install nvm
-#
-#curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
-#source ~/.profile
-#nvm install 5.12.0
-#npm install
-#npm install -g bower
-#npm install -g webpack
 
