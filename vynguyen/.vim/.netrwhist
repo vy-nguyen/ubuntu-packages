@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/vynguyen/ws/clib/common'
-let g:netrw_dirhist_2='/home/vynguyen/ws/clib/unit-test/utest-lib'
-let g:netrw_dirhist_3='/home/vynguyen/Work/oraInventory'
-let g:netrw_dirhist_4='/home/vynguyen/ws/clib/unit-test/json'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/vynguyen/.vim/bundle/vim-jsx/after/ftplugin'
+let g:netrw_dirhist_2='/data/clib/java/socnet/src/front-end/tvntd/mock-json'
+let g:netrw_dirhist_3='/data/clib/java/common'
+let g:netrw_dirhist_4='/data/tvntd/unit-test/json'
+let g:netrw_dirhist_5='/data/tvntd/java/socnet/node_modules/dropzone'
+let g:netrw_dirhist_6='/data/tvntd/java/socnet/src/front-end/shared'
+let g:netrw_dirhist_7='/data/tvntd/java/socnet'

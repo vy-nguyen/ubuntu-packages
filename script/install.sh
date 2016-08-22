@@ -1,6 +1,8 @@
 #!/bin/bash
 
 work_dir=`pwd`
+cp -rf vynguyen/bin ~
+
 sudo cp -rf etc /etc
 if [ "$?" -ne "0" ]; then
     echo "You need to have root permission"
@@ -8,6 +10,7 @@ if [ "$?" -ne "0" ]; then
 fi
 
 sudo apt-get install -y openssh-client openssh-server git tree make unzip tmux
+sudo apt-get install cscope ctags
 
 # Install Java
 #
@@ -20,6 +23,9 @@ sudo ln -s /usr/lib/jvm/java-8-oracle/ /usr/lib/jvm/default-java
 # Install node
 #
 echo "Installing node..."
+sudo rm -rf /usr/local/lib/node_modules/
+rm -rf ~/.nvm/
+
 sudo apt-get remove --purge node
 curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 source ~/.profile
@@ -66,3 +72,5 @@ cd java/socnet
 npm install
 bower install
 
+gradle build
+gradle test
