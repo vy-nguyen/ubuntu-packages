@@ -1,9 +1,7 @@
 #!/bin/sh
 
 find -L . -name "*.py" -xtype f -print > cscope.files
-find -L . -name "*.js" -xtype f -print >> cscope.files
-find -L . -name "*.html" -xtype f -print >> cscope.files
-find -L . -name "*.css" -xtype f -print >> cscope.files
+
 #find -L /usr/lib/python2.7/dist-packages -name "*.py" -xtype f -print >> cscope.files
 #find -L $dir -name "*.py" -xtype f -print >> cscope.files
 #find -L $dir -name "*.html" -xtype f -print >> cscope.files
